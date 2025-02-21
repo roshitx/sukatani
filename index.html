@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1312 | ١٣١٢</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Condiment&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-family: 'Condiment', cursive;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            background-image: url('solidaritas-sukatani.png'),
+                              url('solidaritas-sukatani-2.png'),
+                              url('solidaritas-sukatani-1.png');
+            background-size: 33.33% 100%;  /* Default: bagi 3 dengan full tinggi */
+            background-repeat: no-repeat;
+            background-position: left center, center center, right center;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.3) 80%);
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay tambahan */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsif: Mobile */
+        @media (max-width: 768px) {
+            .container {
+                background-size: cover; /* Hindari gepeng di layar kecil */
+                background-position: center center;
+                background-image: url('solidaritas-sukatani.png'); /* Tampilkan 1 gambar utama di tengah */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>FOREVER 1312</h2>
+            <iframe style="border: 0; width: 350px; height: 720px;" 
+                src="https://bandcamp.com/EmbeddedPlayer/album=1353309106/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" 
+                seamless>
+                <a href="https://dugtrax.bandcamp.com/album/gelap-gempita">Gelap Gempita by Sukatani</a>
+            </iframe>
+            <h2>#KamiBersamaSukatani</h2>
+        </div>
+    </div>
+</body>
+</html>
